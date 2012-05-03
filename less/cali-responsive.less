@@ -1,0 +1,130 @@
+/**
+ * @file Responsive
+ */
+
+
+@media (max-width: 480px) {
+  
+  // Text within icon buttons
+  .btn .text {
+    display:none;
+  }
+  
+  
+  .privatemsg-header-tags,
+  .privatemsg-header-lastupdated {
+    display:none;
+  }
+  
+  // STACKED NAV
+  // -----------
+  
+  // Stacked tabs and pills
+  #primary-tabs > li {
+    float: none;
+  }
+  #primary-tabs > li > a {
+    margin-right: 0; // no need for the gap between nav items
+  }
+
+  // Tabs
+  // ------
+  #primary-tabs {
+    border-bottom: 0;
+  }
+  #primary-tabs > li > a {
+    border: 1px solid #ddd;
+    .border-radius(0);
+  }
+  #primary-tabs > li:first-child > a {
+    .border-radius(4px 4px 0 0);
+  }
+  #primary-tabs > li:last-child > a {
+    .border-radius(0 0 4px 4px);
+  }
+  #primary-tabs > li > a:hover {
+    border-color: #ddd;
+    z-index: 2;
+  }
+  
+  // MODAL
+  // -----------
+  .modal {
+   // position: fixed;
+  }
+  .modal-footer {
+    span {
+      width: 150px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 0;
+  }
+  .navbar-fixed-top .navbar-inner {
+    padding:0;
+  }
+  #page,
+  #modalContent {
+    input.span1 {
+      width: 40px;
+      display: inline-block;
+    }
+  }
+  .input-prepend, 
+  .input-append {
+    input[class*="span"] {
+      display:inline-block;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  // Provide an easy return method to the home screen.
+  .not-front {
+    .navbar {
+      .btn-nav {
+        display:block;
+      }
+      .brand {
+        display:none;
+      }
+      .navbar-inner {
+        background-image:url(../../images/logo-mini.png);
+        background-position:70px 0;
+        background-repeat:no-repeat;
+      }
+    }
+  }
+  .navbar {
+    .btn-group {
+      margin-top:0;
+    }
+    .btn {
+      
+    }
+  }
+}
+
+@media (min-width: 640px) and (max-width: 979px) {
+  .modal {
+    left: 45%;
+    width: 620px;
+  }
+}
+
+@media (min-width: 980px) and (max-width: 11199px) {
+  .modal {
+    left: 43%;
+    width: 700px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    left: 42%;
+    width: 760px;
+  }
+}

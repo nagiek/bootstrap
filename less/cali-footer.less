@@ -1,0 +1,49 @@
+/**
+ * @file
+ * Navigation Styling
+ */
+
+/**
+ * Content-bottom
+ */
+.region-content-bottom {
+  margin-top:@baseLineHeight;
+}
+
+/**
+ * Footer
+ */
+.footer {
+  margin-top: 45px;
+  padding: 35px 0 36px;
+  border-top: 1px solid #E5E5E5;
+}
+ 
+.region-footer {
+  .block {
+    display:inline-block;
+    margin-bottom: 0;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/**
+ * Menus
+ */
+.region-content-bottom,
+.region-footer {
+  ul.menu {
+    padding: 0; /* unset 2em from system.css */
+    margin: 0; /* unset 2em from system.css */
+    li {
+      float:left;
+      margin-right:@baseLineHeight;
+      a {
+        border: none;
+        display: inline-block;
+      }
+    }
+  }
+}

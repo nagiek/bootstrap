@@ -1,0 +1,26 @@
+//
+// Tables.less
+// Tables for, you guessed it, tabular data
+// ----------------------------------------
+
+
+/**
+ * Table override
+ */
+table {
+  &.sticky-header {
+    th {
+      background:@bodyBackground;
+      height: @baseLineHeight;
+      line-height: @baseLineHeight;
+      margin:0;
+      max-width: none;
+      padding: 8px;
+      text-align: left;
+      vertical-align: bottom;
+    }
+  }
+  .row {
+    margin-left:0;
+  }
+}

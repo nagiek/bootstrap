@@ -1,0 +1,721 @@
+/**
+ * @file
+ * Custom frontpage styling
+ */
+
+@controlPadding: 135px;
+@labelPadding: @controlPadding - 20px;
+@splashScreenNavBarHeight: 56px;
+
+/**
+ * Front Page Layout
+ */
+
+/**
+ * Front Page
+ */
+.splash-screen {
+  
+  h2 {
+    border-bottom-color:#aaa;  
+  }
+  
+  .layer-1 {
+    background-position: 50% 0;
+    background-repeat: repeat-x;
+    background-image: url("@{imagesFolder}/background-sky.png");
+    background-color:#e6f6fe;
+  }
+  .layer-2 {
+/*    background-image: url("@{imagesFolder}/background-skyline.png");
+    background-position: 50% 550px;
+    background-repeat: no-repeat;
+*/  }
+  #banner {
+    background-repeat: no-repeat;
+  //  background-image: url("@{imagesFolder}/background-cloud.png");
+  }
+  .hero-unit {
+    background-color: @white;
+    h2 {
+      margin-top:5px;
+      margin-bottom:30px;
+    }
+  }
+  #main {
+    background-color:@white;
+  }
+  #content {
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-image: url("@{imagesFolder}/background-building-roof.png");
+    background-color:#525252;
+    .outer-section {
+      border-color:#333;
+      background-color:#626262;
+      background-image: url("@{imagesFolder}/background-building-top.png");
+      background-position: 0 0;
+      background-repeat: repeat-x;
+    }
+    .section {
+      background-image: url("@{imagesFolder}/background-building-tile.png");
+      background-position: 0 0;
+      background-repeat: repeat;
+    }
+  }
+//#security-pane .inside { background-position: 50% 20px; background-image: url("@{imagesFolder}/image-privacy-lock.png"); }
+//#privacy-pane .inside  { background-position: 50% 20px; background-image: url("@{imagesFolder}/image-privacy.png");      }
+  #free-pane .inside     { background-position: 50% 15px; background-image: url("@{imagesFolder}/image-free-badge.png");   }
+//#plus-one-pane .inside { background-position: 50% 55px; background-image: url("@{imagesFolder}/image-plus-one.png");     }
+  #footer-wrapper {
+    color: #666;
+  }
+  .views-field-title {
+    color:#44749D;
+  }
+  
+  .panel-col-top li {
+    &.active {
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+    }
+    &.tenants {
+      border-bottom-color:#5cd;
+    }
+    a.active {
+      color:#fff;
+    }
+  }
+  .quicktabs-tabpage {
+    .tenants {
+      background-color:#5cd;
+    }
+    .landlord {
+      background-color:#6abf43;
+      border-bottom-color:#6abf43;
+    }
+  }
+  .quicktabs-tabs {
+    .tenants a {
+      background-color:#5cd;
+    }
+    .landlord a {
+      background-color:#6abf43;
+      border-bottom-color:#6abf43;
+    }
+  }
+}
+
+#primary-banner {
+  margin-top:40px;
+  margin-bottom:40px;
+  float:none; // LTR
+  position:relative;
+  z-index:2; // z-index:#main +1
+}
+.region-primary-banner {
+  margin:1em 0 0;
+  .section {
+    padding: 0 30px 60px 10px; /* LTR */
+  }
+}
+#secondary-banner {
+  // Don't apply the pull-right class, as it will be overridden at smaller resolutions.
+  float:right;
+  margin-top:120px;
+}
+.region-secondary-banner {
+  z-index:@zindexFixedNavbar - 10;
+  margin-left:0; // since both are set as span4 classes, have to stop margin from applying.
+  position:relative; // to make z-index work.
+}
+
+.splash-screen {
+  .navbar .brand {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .float-block-fixed {
+    top:@splashScreenNavBarHeight;
+  }
+  #messages-wrapper {
+    padding-top:@splashScreenNavBarHeight - 4px;
+  }
+
+  #page {
+    background-position: top center;
+    &.has-messages {
+      padding-top:120px;
+    }
+  }
+  #header-wrapper {
+    padding: 5px 0;
+  }
+  .subnav-fixed {
+    position: fixed;
+    width: 100%;    
+    z-index:3; // z-index:#main +2
+  }
+  #jq_ez_bg {
+    position:fixed;
+    //position:absolute;
+    // top:550px;
+    // top:250px;
+    //top:61px; // Navbar height
+    left:0px;
+    z-index:1;
+    overflow:hidden;
+    max-width:none;
+  }
+  #main {
+    position:relative;
+    z-index:1;
+/*    .group {
+      margin-bottom:@baseLineHeight * 3;
+    }*/
+  }
+  #content {
+    .outer-section {
+      margin-top: 36px; /* 36px = roof background height */
+    }
+    .section {
+      padding-top: 40px;
+    }
+  }
+  #features {
+    h1 {
+      margin-bottom:30px;
+    }
+    .panel-panel {
+      margin-bottom:20px;
+      > div {
+        padding:0 10px;
+      }
+    }
+  }
+
+  .footer {
+    z-index:1;
+    position:relative;
+    margin-top:60%;
+    margin-bottom:20px;
+    text-align:center;
+    .buttonBackground(#5bc0de, #2f96b4);
+    a {
+      color:@white;
+      &:hover {
+        background-color:transparent;
+        text-decoration:underline;
+      }
+    }
+  }
+  /**
+   * Panes
+   */
+   // .panel-col-top {
+   //   .block-image,
+   //   .caption {
+   //     float:right; /* LTR */
+   //     text-align:center; /* LTR */
+   //     /*width:538px;*/ /* 558px - 20px scroll bar */
+   //     //width:458px; /* 558px - 20px scroll bar */
+   //   }
+   //   img {
+   //     border-style: solid;
+   //     border-width: 1px;
+   //     padding: 10px 20px;
+   //   }
+   //   .quicktabs-tabpage {
+   //     margin:0 20px;
+   //     .quicktabs-views-group {
+   //       font-size:1.25em;
+   //       line-height:1.65em;
+   //       text-shadow:#fff 0 1px 0;
+   //       margin:1em 0 2em;
+   //     }
+   //   }
+   //   .quicktabs-tabs {
+   //     li {
+   //       display:inline-block;
+   //       padding-bottom:10px;
+   //       margin:0 1em;
+   //       list-style:none;
+   //       a {
+   //         display:inline;
+   //         padding:5px 10px;
+   //         border-bottom:none;
+   //         text-transform:uppercase;
+   //         font-size:0.9em;
+   //         padding:0.5em 1em;
+   //         color:#fff;
+   //       }
+   //       p {
+   //         font-size:0.85em;
+   //       }
+   //     }
+   //   }
+   //   #quicktabs-container-view__how_to_get_started__panel_pane_1 {
+   //     height:300px;
+   //     overflow-y:scroll;
+   //   }
+   // }
+   // // .has-railing {
+   // //   .railing-top {
+   // //     width:100%;
+   // //     height:7px;
+   // //   }
+   // //   .railing {
+   // //     width:100%;
+   // //     height:80px;
+   // //   }
+   // //   .railing-group {
+   // //     position:relative;
+   // //     z-index:2; /* this approach will trap the bottom scroll arrow behind the balcony */
+   // //     margin-top:-87px;
+   // //   }
+   // // }
+   // .panel-pane {
+   //   .outer-inside {
+   //     border-top:3px solid #Ccc;
+   //     border-left:3px solid #Ccc;
+   //     border-right:3px solid #Ccc;
+   //   }
+   //   .inside {
+   //     margin:0;
+   //     padding: 30px 20px;
+   //   }
+   // }
+   // .center-wrapper {
+   //   .panels-flexible-column {
+   //     width:310px;
+   //     .panels-flexible-row-inside {
+   //       padding:70px 0 0;
+   //       margin:50px 15px 0;
+   //     }
+   //   }
+   //   .panel-pane {
+   //     .outer-inside {
+   //       border:3px solid #Ccc;
+   //       margin: 0 15px;
+   //       height:340px;
+   //     }
+   //     .inside {
+   //       padding-top: 180px;
+   //     }
+   //   }
+   // }
+   // .panels-flexible-region {
+   //   width:100%;
+   // }
+   // .panels-flexible-row-last {
+   //   margin-top: 50px;
+   // }
+  
+  /**
+   * Quicktabs styling
+   */
+   // #quicktabs-view__why_ruumies___panel_pane_1 {
+   //   .quicktabs-tabs li {
+   //     display:list-item; /* override quicktabs.css */
+   //     padding:0; /* override quicktabs.css */
+   //   }
+   //   .quicktabs_main {
+   //     float:left; /* LTR */
+   //     /*width:402px;*/ /* Content width (564px) * 75% - Quicktabs width padding (20px) - 1px */
+   //     /*width:662px;*/ /* Content width (920px) * 75% - Quicktabs width padding (20px) - 2px border - 1px */
+   //     width:576px; /* Content width (920px) * 75% - Quicktabs width padding (20px) - 2px border - 1px */
+   //     border-left-width:1px; /* LTR */
+   //     border-left-style:solid; /* LTR */
+   //     padding: 0 10px;
+   //     .views-field-body {
+   //       width:70%;
+   //     }
+   //   }
+   //   .quicktabs-tabs {
+   //     float:left; /* LTR */
+   //     /*width:140px;*/ /* Content width (564px) * 25% - 1px */
+   //     width:215px; /* Content width (920px) * 25% */
+   //     margin: 0;
+   //     padding: 0;
+   //     li {
+   //       clear:left; /* LTR */
+   //     }
+   //   }
+   //   .inside {
+   //     padding-bottom: 100px;
+   //   }
+   //   .quicktabs-tabpage .views-field-field-target-market {
+   //     text-align:right; /* LTR */
+   //     li {
+   //       list-style:none;
+   //       display:inline;
+   //       text-transform:uppercase;
+   //       font-size:0.9em;
+   //       padding:0.5em 1em;
+   //       margin:0 1em;
+   //       color:#fff;
+   //     }
+   //   }
+   // }
+}
+
+
+/**
+ * Register block
+ */
+html.js #block-ruumies-overrides-register fieldset.collapsed {
+  height:auto; // Override system.base.css
+  .fieldset-title {
+  /*  background-image: url("@{imagesFolder}/register-arrow-collapsed.png");*/
+    &:hover {
+  /*    background-image: url("@{imagesFolder}/register-arrow-collapsed-hover.png");*/
+    }
+  }
+}
+
+#block-ruumies-overrides-register {
+  z-index:@zindexFixedNavbar - 10;
+  margin:0;
+
+
+  // Remove settins from .btn
+  /*    float: none; */
+    text-align:left; /* LTR */
+      display: block;
+/*      width: auto;*/
+  /*    margin: 0;*/
+
+
+  
+  label,
+  a {
+    color:@white;
+  }
+  form {
+/*    width:100%;*/
+    margin:0;
+  }
+  
+  .content {
+    text-align:left;
+    display: block;
+    padding:0 10px;
+    &.active,
+    &:active {
+      // Do not put a shadow on the box.
+      .buttonBackground(#62c462, #51a351);
+      @shadow: none;
+      .box-shadow(@shadow);
+    }
+  }
+
+  
+  
+  .block-header {
+    background-image: url("@{imagesFolder}/background-block-register-header.png");
+    background-position: 50% 100%;
+  }
+
+  .block-body {
+    background-image: url("@{imagesFolder}/background-block-register-body.png");
+    background-position: 0 0;
+    background-repeat: repeat-y;
+    min-height:24px; /* 16px regular height + 4px * 2 top and bottom padding */
+  }
+
+  .block-footer {
+    background-image: url("@{imagesFolder}/background-block-register-footer.png");
+    background-position: 50% 0%;
+  }
+  
+  .block-header,
+  .block-footer {
+    height:15px;
+    width:100%;
+    background-repeat: no-repeat;
+  }
+
+  .control-group {
+    margin-bottom:12px;
+  }
+  .control-label {
+    width:@labelPadding;
+  }
+  .controls {
+    margin-left:@controlPadding;
+  }
+  fieldset {
+    border:none;
+    margin:0;
+    padding:0;
+    &.collapsed {
+      padding:0;
+      legend {
+        display:block;
+        width:100%;
+        //height:40px;
+      }
+      .fieldset-wrapper {
+        display:none; // Keep as we change .fieldset-wrapper display.
+      }
+      .fieldset-title {
+        display:inline-block; /* .summary conflict if not inline */
+      }
+    }
+      legend {
+        margin:0;
+        padding:0;
+    //    position:relative;
+    //    top:-14px;
+        border:none;
+      }
+      .fieldset-legend {
+        background:none;
+        padding:0;
+        margin:0;
+        //height:30px;
+      }
+      .fieldset-title {
+        // background-image: url("@{imagesFolder}/register-arrow-expanded.png");
+        // background-position: 50px 50%;
+        // background-repeat: no-repeat;
+        text-align:center;
+        width:100%;
+        height:100%;
+        padding:@baseLineHeight/2 0;
+        display:block; /* .summary conflict if not inline */
+        // width:255px; /* (ie7 compatibility) 316px - 55px - 40px */
+        //padding: 8px 0 8px 30px; /* LTR */
+        /*position:relative;*/
+        /*top:-6px;*/
+        //margin-bottom:-20px; /* Otherwise first field is not selectable */
+        //margin-top:@baseLineHeight/2;
+        text-shadow: #aaa 0 -1px 0;
+    		&:hover {
+    		  text-decoration:none;
+    		}
+      }
+  }
+  .fieldset-wrapper {
+    display:inline-block; /* weird padding error on chrome if not inline */
+    width:100%;
+  }
+/*  .form-actions {
+    margin-top:0;
+    margin-bottom:0;
+    padding: 0;
+    padding-left:@labelPadding;
+    background-color: transparent;
+    border-top: none;
+  }*/
+  .form-submit {
+    width: 100%;
+  }
+}
+
+
+
+
+// MIN width
+// ---------
+@media (min-width:768px) {
+  #primary-banner {  
+    // Place the signup div within the hero-unit.
+    float:left; // LTR
+  }
+  .splash-screen {
+    #page {
+      padding-top:60px;
+    }
+  }
+}
+
+@media (min-width:980px) {
+  #primary-banner {
+    margin-bottom:90px;
+  }
+  .splash-screen {
+    padding-top:0px;
+    .navbar {
+      .btn.pull-right {
+        display:none;
+      }
+      .btn-navbar {
+        display:none;
+      }
+    }
+  }
+}
+
+// Max width
+// ---------
+@media (max-width:979px) {
+  #block-ruumies-overrides-register {
+    .form-text {
+      display: block;
+      width:@labelPadding + 80px;
+    }
+  }
+  #primary-banner {
+    margin-top:0px;
+  }
+  .splash-screen {
+    .navbar-fixed-top {
+      position: relative;
+    }
+  }
+}
+
+@media (max-width:767px) {
+  #block-ruumies-overrides-register {
+    width:100%;
+    .content {
+      padding:0 20px;
+    }
+    input[class*="span"], select[class*="span"], textarea[class*="span"], .uneditable-input {
+      display: block;
+      width:100%;
+      min-height: 28px;
+    }
+  }
+  .splash-screen {
+    .hero-unit {
+      padding: 30px;
+      h1 {
+        font-size:50px;
+      }
+      h2 {
+        margin-bottom:20px;
+      }
+    }
+    #features {
+      h1 {
+        margin-bottom:20px;
+      }
+      .panel-panel {
+         > div {
+          padding:0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .splash-screen .float-block-fixed {
+    position:static;
+  }
+}
+
+@media (max-width: 640px) {
+  #primary-banner {
+    // Don't apply the pull-right class, as it will be overridden at smaller resolutions.
+    float:right;
+  }
+  #secondary-banner {
+    width:100%;
+    margin-top:0px;
+    margin-bottom:20px;
+  }
+  .navbar-fixed-top {
+    position: relative;
+  }
+}
+
+@media (max-width: 480px) {
+  #block-ruumies-overrides-register {
+    .control-group > label {
+      float:left;      
+    }
+    .control-label {
+      width:@labelPadding - 45px;
+    }
+    .controls {
+      margin-left:@controlPadding - 60px;
+    }
+  }  
+  #secondary-banner {
+    width:100%;
+    margin-top:0px;
+    margin-bottom:20px;
+  }
+  .splash-screen {
+    .hero-unit {
+      h1 {
+        font-size:35px;
+      }
+      h2 {
+        font-size:18px;
+        line-height:24px;
+        margin-bottom:10px;
+      }
+      p {
+        font-size:14px;
+      }
+    }
+  }
+  #jq_ez_bg {
+    top:0;
+  }
+}
+
+// In betweens
+// ---------
+
+@media (min-width: 480px) and (max-width:767px) {
+  #block-ruumies-overrides-register {
+    .control-label {
+      width:@labelPadding - 20px;
+    }
+    .controls {
+      margin-left:@controlPadding - 20px;
+    }
+  }
+}
+
+@media (min-width: 640px) and (max-width:767px) {
+  #secondary-banner {
+    margin-top:30px;
+    margin-right:20px;
+  }
+}
+
+@media (min-width:768px) and (max-width:979px) {
+  .splash-screen {
+    padding-top: 0;
+  }
+  #secondary-banner {
+    margin-top:80px;
+  }
+  #block-ruumies-overrides-register {
+    .control-label {
+      float: none;
+      text-align: left;
+    }
+    .controls {
+      margin-left: 0;
+    }
+/*    .form-actions {
+      padding-left:0;
+    }*/
+    .control-label {
+      width:auto;
+    }
+  }
+}
+
+
+@media (min-width:980px) and (max-width:1199px) {
+  #block-ruumies-overrides-register {
+
+/*    .control-label {
+      width:@labelPadding - 35px;
+    }
+    .controls {
+      margin-left: @controlPadding - 35px;
+    }*/
+/*    .form-actions {
+      padding-left:115px;
+    }*/
+  }
+}

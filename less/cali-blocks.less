@@ -1,0 +1,57 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+
+.block /* Block wrapper */ {
+  h2.block-title /* Block title */ {
+    margin: 0;
+  }
+}
+
+
+/* Help block */
+#block-system-help {
+  h2, h3 {
+    display:inline-block;
+  }
+  // make equivalent to h3
+  h2 {
+    line-height: @baseLineHeight * 1.5;
+    font-size: 18px;
+  }
+  
+  .hide-this-block {
+    text-align:right; /* LTR */
+  }
+}
+
+@media (min-width: 768px) {
+  #block-system-help {
+    margin-bottom: 0;
+  }
+}
+
+/* Register block */
+#block-ruumies-ruumies-register {
+  p {
+    margin-bottom:16px;
+  }
+  .or {
+    padding:1em 2.5em;
+  }
+  .form-submit {
+    margin:0;
+  }
+}
+
+/* Tabs block */
+#block-blockify-blockify-primary-tabs {
+  margin-bottom:0;
+}
+
+/* Ad block */
+#block-block-3 {
+  margin-top:1.5em;
+}

@@ -1,0 +1,312 @@
+/**
+ * @file
+ * Form Styling
+ */
+
+/**
+ * Twitter Bootstrap - Drupal joiners.
+ */
+.form-inline .form-type-textfield {
+  display: inline-block;
+  margin-bottom: 0;  
+}
+
+form {
+  .help-block {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+/**
+ * Override twitter_bootstrap.css 
+ */
+.container-inline {
+  div,
+  label {
+    display: inline;
+  }
+}
+
+.form-actions {
+  .btn-group {
+    .btn + .btn {
+    margin-left:-1px;
+    }
+  }
+  .btn  + .btn {
+    margin-left:5px;
+  }
+  &.modal-footer {
+    margin-top:0;
+  }
+  label {
+    float:left;
+    margin-right: 20px;
+  }
+}
+
+/**
+ * Dropdowns
+ */
+@media (max-width: 767px) { 
+  .view-content .dropdown-menu {
+    left:auto;
+    right:0;
+  }
+}
+
+
+/**
+ * Vertical Tabs
+ */
+.vertical-tabs-panes {
+  padding-top:0; // Fixing a problem of vertical tabs with only inputs
+}
+
+/**
+ * block-user-login
+ */
+#user-login {
+  a.control-group {
+    margin-top:10px;
+    display:block;
+  }
+}
+
+#block-user-login {
+  form {
+    margin-top:5px;
+    margin-bottom:0;
+  }
+  .btn {
+    margin-top: 0;
+  }
+  .control-group,
+  .form-text,
+  .form-item,
+  .form-actions,
+  a {
+    margin:0;
+    margin-right:2px; /* LTR */
+    float:left; 
+    display:block;
+  }
+  .form-type-checkbox {
+    margin-right:2px * 2; /* LTR */
+  }
+  .form-item {
+    margin:0 10px 0 0; /* LTR */
+    padding:0;
+  }
+  .form-actions { /* override TB.forms.less */
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+  .controls > .checkbox:first-child,
+  a {
+    /* override TB.forms.less */
+    padding-top:0;
+    font-size:@baseFontSize * 0.8;
+  }
+  // Fake adding a "span2" class
+/*  .form-type-checkbox {
+    #gridSystem > .columns(@gridGutterWidth, @gridColumnWidth, @gridRowWidth, 2);
+  }*/
+}
+
+@media (max-width: 979px) {
+  #block-user-login {
+    display:none;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  #block-user-login .form-type-checkbox {
+    width: 170px;
+  }
+}
+
+/**
+ * Forms
+ */
+/**
+ * Actions
+ */
+#edit-actions label,
+#edit-actions div {
+  display:inline-block;
+} 
+
+/**
+ * Floorplan
+ */
+.multi-unit-add-form {
+  .form-actions > .btn {
+    float:left;
+  }
+  .modal-footer {
+    text-align:left;
+  }
+}
+
+@media (max-width: 480px) {
+  .multi-unit-add-form {
+    .row {
+      > div {
+        margin-bottom:18px;
+      }
+    }
+    .modal-footer {
+      .form-item-x {
+        margin-left:40px;
+      }
+      .form-item-increment {
+        margin-left:25px;
+      }
+    }
+  }
+}
+
+/**
+ * Image Fieldsets
+ */
+.field-widget-image-image {
+  legend {
+    padding-top:0;
+    font-size:@baseFontSize;
+  }
+}
+
+
+/*.table {
+  tbody tr:hover td,
+  tbody tr:hover th {
+    background-color: @tableBackgroundHover;
+  }
+}*/
+
+/*#edit-insert-actions {
+  .form-item,
+  .control-group,
+  .controls,
+  label {
+    display: inline-block;
+    margin:0;
+  }
+  input {
+    margin-bottom: 0;
+  }
+}*/
+
+/**
+ * Users Form
+ */
+.ruumies-users-fieldset {
+  .form-type-textfield {
+    float:left;
+  }
+  .btn-group {
+    float:left;
+    margin-left:5px;
+  }
+  .row {
+    margin-left:0;
+  }
+}
+
+/**
+ * Lease Form
+ */
+.node-lease-form {
+  .form-item-field-unit-und {
+    display:inline-block;  
+  }
+  .form-item-field-unit-other-unit {
+    display:inline-block;
+    margin-left:5px;
+  }
+  .group-rent {
+    /*padding-top:@baseFontSize;*/
+  }
+  .field-widget-number {
+/*    margin-left:30px;*/
+  }
+  .field-name-field-rent {
+    padding-top:@baseLineHeight; // 2 form items down, to be in the middle of the form.
+  }
+  .group_info {
+    margin-bottom:@baseLineHeight;
+  }
+}
+
+/**
+ * Fieldsets
+ */
+fieldset {
+  .fieldset-wrapper {
+    // Bug fix to give padding to legend.
+    padding-top: 18px;
+  }
+  legend {
+    padding-top: 27px;
+  }
+}
+
+.collapsible .fieldset-wrapper {
+  // Bug fix to give padding to legend.
+  // legend has 27px margin-bottom, but it doesn't work.
+  padding-top: 0;
+}
+ 
+html.js .accordion-group.collapsed {
+  // Override system.base.css
+  border-bottom: 1px solid #E5E5E5;
+  border-left: 1px solid #E5E5E5;
+  border-right: 1px solid #E5E5E5;
+  height: @baseLineHeight + @baseFontSize;
+}
+
+.accordion-group {
+  > legend {
+    font-size: @baseFontSize;
+    line-height: @baseLineHeight;
+
+
+    display: block;
+    width: 100%;
+    left: -1px;
+    padding: 0;
+    position: absolute;
+/*    text-indent: 10px;*/
+/*    top: @baseFontSize;*/
+    border-bottom:0;
+    .caret {
+      margin-top: 7px;
+      margin-left: 0;
+      margin-right: 7px;
+    }
+
+  }
+  > .fieldset-wrapper {
+    margin-top: @baseLineHeight + @baseFontSize;
+  }
+  &.collapsed {
+    .caret {
+      // Adjust placement by 2px
+      margin-top: 5px;
+      margin-left: 2px;
+      margin-right: 5px;
+
+      // Adjust direction
+      border-bottom: 4px solid transparent;
+      border-top: 4px solid transparent;
+      border-left: 4px solid black;
+      border-right: 4px solid transparent;
+    }
+  }
+}

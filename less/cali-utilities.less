@@ -1,0 +1,33 @@
+
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be a collapsible fieldset that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+.element-hidden {
+  display: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Add additional class to fix text.
+ */
+.element-invisible {
+  font-size: 0px;
+  display:inline-block;
+}
+
+/**
+ * Fix objects at the top of the screen.
+ *
+ * Used for to keep important links and information in sight.
+ */
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}

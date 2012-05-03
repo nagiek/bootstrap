@@ -1,0 +1,76 @@
+/**
+ * @file
+ * Node Styling
+ *
+ * Style anything that isn't in the $content variable.
+ */
+
+/**
+ * Tasks
+ */
+.tasks {
+  margin:20px 0;
+  ul {
+    float:left; /* LTR */
+    margin-right:40px; /* LTR */
+  }
+  li {
+    list-style:none;
+    margin-left:-20px;
+  }
+}
+
+/**
+ * Nodes
+ */
+.node-unpublished div.unpublished,
+.comment-unpublished div.unpublished /* The word "Unpublished" displayed underneath the content. */ {
+  height: 0;
+  overflow: visible;
+  word-wrap: break-word; /* A very nice CSS3 property */
+}
+
+.node.node-unpublished .picture,
+.comment.comment-unpublished .picture {
+  position: relative; /* Otherwise floated pictures will appear below the "Unpublished" text. */
+}
+
+.node {
+  .submitted /* The "posted by" information */ {
+    margin-top: 5px;
+    margin-bottom: 12px;
+  }
+  .terms /* Node terms (taxonomy) */ {
+    margin: 0 0 0 0;
+    padding: 10px 0 0 0;
+  }
+  ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
+    margin: 1em 0;
+  }
+}
+
+.node-teaser {
+  .field-type-image {
+    float:left;
+    margin-right:5px;
+  }
+}
+
+
+/* List of links */
+ul.links {
+  margin: 0;
+  padding: 0;
+  &.inline {
+    display: inline;
+  }
+  li {
+    display: inline;
+    padding: 0 12px 0 0;
+  }
+  .field-label-inline .field-label {
+    width:100px;
+  }
+}
+
+

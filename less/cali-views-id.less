@@ -1,0 +1,381 @@
+/* views UI */
+
+/**
+ * @file
+ * Views ID Styling
+ */
+
+
+.view-id-tenant_tenants_in_group {
+  .views-row {
+    margin-bottom:9px;
+  }
+}
+
+
+/**
+ * .view-id-features_landlord
+ * .view-id-features_tenant
+ */
+.view-id-features_landlord table.views-view-grid.cols-2 .col-1,
+.view-id-features_landlord table.views-view-grid.cols-2 .col-2,
+.view-id-features_tenant   table.views-view-grid.cols-2 .col-1,
+.view-id-features_tenant   table.views-view-grid.cols-2 .col-2 {
+  padding:0 20px 10px 0; /* LTR */
+}
+
+/**
+ * .view-id-accept_reject_node_tenant
+ */
+.view-id-accept_reject_node_tenant thead {
+  display:none;
+}
+
+/**
+ * .view-id-lease_fields_by_property_and_lea
+ *
+ * copies the node view
+ */
+.view-id-lease_fields_by_property_and_lea .views-field {
+  margin-bottom:1em;
+}
+
+.view-id-lease_fields_by_property_and_lea .views-field .views-label {
+  display:inline-block;
+  width:30%;
+}
+
+.view-id-lease_fields_by_property_and_lea .views-field .field-content {
+  display:inline;
+  line-height:1.583em;
+}
+
+/**
+ * Pending join requests, aka dashboard-header
+ */
+.view-id-pending_tenant_requests  {
+  .views-row {
+    margin-bottom:18px;
+  }
+  .person {
+    margin-left:30px;
+  }
+}
+
+/**
+ * .view-id-my_leases
+ */
+.view-id-my_leases {
+  h3 {
+    display:inline;
+  }
+}
+
+
+
+/**
+ * .view-id-pending_expenses
+ */
+.view-id-pending_expenses {
+  h5 {
+    
+  }
+  .views-field-field-expense {
+    margin-right:5px;
+  }
+}
+
+/**
+ * .view-id-my_properties
+ */
+.view-id-my_properties.view-display-id-panel_pane_1 {
+  .views-row {
+    margin-left:0;
+  }
+  .views-row-odd {
+    background-color:@blueLight;
+  }
+  .views-row-even {
+    background-color:@blueLighter;
+  }
+  img {
+    float:left;
+    margin-right: 10px; /* LTR */
+  }
+  .views-field-title {
+    margin-top:3px;
+    margin-bottom:3px;
+    margin-left:0;
+    .pull-right {
+      margin-top:5px;
+    }
+    h3 {
+      margin-top:5px;
+    }
+  }
+  // Subfields
+  .subfield {
+    margin-top:5px + 7px; // account for differents in font size between h3 and h4
+    h4 {
+      float:left;
+      margin-right:5px;
+    }
+    .field-content {
+      float:left;
+      font-size:110%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .view-id-my_properties.view-display-id-panel_pane_1 {
+    .views-row {
+      padding-bottom:12px;
+      > ul {
+        margin:0;
+        margin-left:84px;
+      }
+    }
+
+    .views-field-title {
+      margin-top:3px;
+      margin-bottom:3px;
+      margin-left:0;
+      img {
+        float:left;
+        margin-right: 10px; /* LTR */
+      }
+      .pull-right {
+        margin-top:5px;
+        margin-right:10px;
+      }
+      h3 {
+        margin-top:5px;
+      }
+    }
+    .subfield {
+      margin-top:3px; // account for differents in font size between h3 and h4
+      width:200px;
+      margin-left:0;
+      h4 {
+        float:left;
+        width: 110px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/**
+ * .view-id-payments_on_lease_actions
+ */
+.view-id-payments_on_lease_actions .form-submit {
+  padding:5px 10px;
+}
+
+/**
+ * .view-id-leases_in_property 
+ */
+.view-id-leases_in_property .views-field-title {
+  width:4em;
+}
+
+/**
+ * Formatting mixin for views with a "Sum" attachment
+ */
+.hidden-summary() {
+  form,
+  table {
+    margin-bottom:0;
+  }
+  &.view-display-id-attachment_1 {
+    font-weight:bold;
+    thead {
+      display:none;
+    }
+    tbody {
+      border-top-style:solid;
+      border-top-width:1px;
+    }
+  }
+}
+
+
+/**
+ * .view-id-property_rent_income AND
+ * .view-id-property_expenses AND
+ * .view-id-expenses_in_property
+ */
+ 
+.view-id-rent_schedule_report,
+.view-id-rent_report,
+.view-id-other_income_report,
+.view-id-expenses_report,
+.view-id-cash_rent_report,
+.view-id-cash_other_income_report,
+.view-id-cash_expenses_report {
+  .hidden-summary()  
+}
+ 
+.view-id-expenses_in_property,
+.view-id-rent_income_in_property,
+.view-id-other_income_in_property,
+.view-id-property_rent_income,
+.view-id-property_other_income,
+.view-id-property_rent_schedule,
+.view-id-property_expenses,
+.view-id-property_rent_this_month {
+  .hidden-summary()
+}
+
+.view-id-property_rent_this_month.view-display-id-attachment_3 thead {
+  display:none;
+}
+
+
+.view-id-property_rent_this_month.view-display-id-attachment_3 tbody {
+  border-top-style:solid;
+  border-top-width:1px;
+}
+
+
+
+.view-id-cash_other_income_report,
+.view-id-cash_rent_report {
+  .view-content {
+    .views-field-title,
+    .views-field-title-1                  { width:35%; }
+    .views-field-field-rent               { width:30%; }
+  }
+  .attachment {
+    .views-field-title                    { width:70%; }
+    .views-field-field-rent               { width:30%; }
+  }
+}
+
+.view-id-cash_expenses_report {
+  .view-content {
+    .views-field-title,
+    .views-field-title-1                  { width:35%; }
+    .views-field-field-expense            { width:30%; }
+  }
+  .attachment {
+    .views-field-title                    { width:70%; }
+    .views-field-field-expense            { width:30%; }
+  }  
+}
+
+.view-id-expenses_report {
+  .view-content {
+    .views-field-views-bulk-operations    { width:4%; }
+    .views-field-title,
+    .views-field-title-1,
+    .views-field-field-monetary-tags,
+    .views-field-field-transaction-date,
+    .views-field-field-paid-expense,
+    .views-field-field-expense            { width:16%; }
+  }
+  .attachment {
+    .views-field-title                    { width:84%; }
+    .views-field-field-expense            { width:16%; }
+  }
+}
+
+.view-id-expenses_report {
+  .view-content {
+    .views-field-views-bulk-operations    { width:4%; }
+    .views-field-title,
+    .views-field-title-1,
+    .views-field-field-monetary-tags,
+    .views-field-field-transaction-date,
+    .views-field-field-paid-expense,
+    .views-field-field-rent            { width:16%; }
+  }
+  .attachment {
+    .views-field-title                    { width:84%; }
+    .views-field-field-expense            { width:16%; }
+  }
+}
+
+.view-id-rent_report,
+.view-id-other_income_report {
+  .view-content {
+    .views-field-views-bulk-operations    { width:4%; }
+    .views-field-title,
+    .views-field-title-1,
+    .views-field-field-monetary-tags,
+    .views-field-field-transaction-date,
+    .views-field-field-paid,
+    .views-field-field-rent               { width:16%; }
+  }
+  .attachment {
+    .views-field-title                    { width:84%; }
+    .views-field-field-rent               { width:16%; }
+  }
+}
+
+.view-id-rent_schedule_report {
+  .view-content {
+    .views-field-title,
+    .views-field-title-1                  { width:35%; }
+    .views-field-field-rent               { width:30%; }
+  }
+  .attachment {
+    .views-field-title                    { width:70%; }
+    .views-field-field-rent               { width:30%; }
+  }  
+}
+
+/**
+ * -title and -title-1 are two separate fields due to views bug.
+ * Aggregation on Attachment view will overwrite display of 
+ * non-aggregated fields in Content Pane view.
+ */
+.view-id-property_expenses .views-field-title,
+.view-id-property_expenses .views-field-title-1                 { width:30%; }
+.view-id-property_expenses .views-field-field-transaction-date  { width:30%; }
+.view-id-property_expenses .views-field-field-expense           { width:40%; }
+
+.view-id-property_rent_income .views-field-title,
+.view-id-property_rent_income .views-field-title-1                   { width:50%; }
+.view-id-property_rent_income .views-field-field-rent                { width:50%; }
+
+.view-id-property_other_income .views-field-title,
+.view-id-property_other_income .views-field-title-1                   { width:50%; }
+.view-id-property_other_income .views-field-field-rent                { width:50%; }
+
+.view-id-property_rent_schedule .views-field-title,
+.view-id-property_rent_schedule .views-field-title-1                   { width:50%; }
+.view-id-property_rent_schedule .views-field-field-rent                { width:50%; }
+
+.view-id-property_rent_schedule .views-widget-filter-field_date_value2 label {
+  display:none;
+}
+
+/**
+ * .view-id-expenses_in_property
+ */
+.view-id-expenses_in_property td.views-field-title,
+.view-id-expenses_in_property td.views-field-title-1                 { width:25%; }
+.view-id-expenses_in_property td.views-field-field-monetary-tags     { width:25%; }
+.view-id-expenses_in_property td.views-field-field-transaction-date  { width:25%; }
+.view-id-expenses_in_property td.views-field-field-expense           { width:25%; }
+
+/**
+ * .view-id-rent_income_in_property
+ */
+.view-id-rent_income_in_property td.views-field-title,
+.view-id-rent_income_in_property td.views-field-title-1                 { width:25%; }
+.view-id-rent_income_in_property td.views-field-field-monetary-tags     { width:25%; }
+.view-id-rent_income_in_property td.views-field-field-transaction-date  { width:25%; }
+.view-id-rent_income_in_property td.views-field-field-expense           { width:25%; }
+
+
+/**
+ * .view-id-other_income_in_property
+ */
+.view-id-other_income_in_property td.views-field-title,
+.view-id-other_income_in_property td.views-field-title-1                 { width:25%; }
+.view-id-other_income_in_property td.views-field-field-monetary-tags     { width:25%; }
+.view-id-other_income_in_property td.views-field-field-transaction-date  { width:25%; }
+.view-id-other_income_in_property td.views-field-field-expense           { width:25%; }

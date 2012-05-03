@@ -1,0 +1,127 @@
+
+/**
+ * Ctools
+ */
+.modal {
+  background-color:@bodyBackground;
+}
+
+#modalBackdrop {
+  z-index:@zindexModalBackdrop;
+}
+
+/**
+ * Quicktabs
+ */
+.quicktabs-hide {
+  display:none;
+}
+
+/**
+ * Privatemsg
+ */
+fieldset#edit-filter {
+  padding-bottom:0;
+  margin-bottom:18px;
+}
+
+/**
+ * Date fields
+ */
+html .form-item-field-transaction-date-und-0-value-date label,
+html .form-item-field-month-und-0-value-date label,
+html .form-item-field-birthday-und-0-value-date label,
+html .form-item-field-reading-date-und-0-value-date label {
+  display:none;
+}
+
+.ui-datepicker {
+  width:280px;
+  .ui-datepicker-prev {
+    width:40px;    
+  }
+  .ui-datepicker-next {
+    width:40px;  
+    right: 14px;
+  }
+  .ui-datepicker-title {
+    width:180px;
+    margin:0 50px;
+  }
+}
+
+.start-date-wrapper {
+  margin-left:0;
+  margin-right:5px;
+}
+
+.end-date-wrapper {
+  margin-left:0;
+}
+
+// Total override of two classes.
+// -----------------------------
+.date-no-float {
+  width: auto;
+/*  clear: none;*/
+}
+
+
+.container-inline-date {
+  clear:none;
+  > .form-item {
+    border:none;
+    margin-bottom:0;
+    display:block;
+  }
+  .date-padding {
+    padding:0;      
+    .form-type-select label {
+      display:none;
+    }
+    .control-group {
+      float:left;
+    }
+  }
+  .description {
+    display:none;  
+  }
+  .form-type-date-select .description {
+    display:block;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-inline-date {
+    li {
+      display:inline;
+    }
+  }
+}
+
+.field-type-date {
+  // margin-bottom:18px;
+}
+
+.form-type-date-popup {
+  border:none;
+  .form-item {
+    margin:0;
+  }
+}
+
+/**
+ * Active Tags
+ */
+.at-term-entry {
+  float:none;
+  display:inline;
+}
+
+.at-term-list {
+  padding:0;
+}
+
+.at-term-text {
+  padding:4px 0 4px 3px; /* LTR */
+}

@@ -1,0 +1,197 @@
+/**
+ * @file
+ * Property Page Styling
+ */
+
+.dashboard {
+  li {
+    float:left; /* LTR */
+    margin-right:@baseLineHeight;
+    margin-top:4px;
+    &.btn-group {
+      margin-top:0;
+    }
+  }
+}
+/**
+ * Property
+ */
+.property {
+  #back-to-property {
+    margin-top:9px;
+    margin-left:18px;
+  }
+  .page-header {
+    margin-top:0;
+    img {
+      float:left;
+      position:relative;
+      z-index:1;
+    }
+    h1 {
+      float:none;
+      display:block;
+      margin:8px 6px;
+      min-height:44px;
+      margin-left: 100px + 12px;
+      color:@black; // Keep, as it will be a link
+    }
+  }
+  .header-info {
+    float: left;
+    padding-right: 12px;
+    margin-left: -4px;
+//    vertical-align: middle;
+//    padding:0;
+//    margin-left:0px;
+//    border: 1px solid #ccc; // Borders will throw off the span tags
+/*    border-bottom-color: #bbb;*/
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    .border-radius(4px);
+    @shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    .box-shadow(@shadow);
+    .buttonBackground(lighten(#5bc0de, 20%), lighten(desaturate(#2f96b4, 20%), 10%));
+  }
+  .breadcrumb {
+    margin-left:-0.2em;
+    padding: 4px 0;
+  /*  display:inline-block;*/
+    a {
+      margin: 0 0.2em;
+      border-bottom: none; /* 'a' override */
+      &:hover {
+        border-bottom-style:solid;
+        border-bottom-width:2px;
+      }
+    }
+  }
+/*  .region-title-header {
+    margin-top:17px;
+    margin-left:15px;
+  }*/
+  
+  
+  #title-blocks {
+    display:inline-block;
+    .nav-tabs {
+      margin:0 3px 0 9px; /* LTR */
+      position:relative;
+      top:5px; // 4px border radius +1.
+      //border-bottom:solid 1px @white;
+      border-bottom:none;
+
+      > li {
+        > a {
+          text-shadow:none;
+          color:@white;
+          border-bottom-color:@white;
+          .caret {
+            border-top-color:@white;
+          }
+          &.btn-success {
+            background-color: #51A351;
+            &:hover {
+              border: 1px solid #DDD;
+              border-bottom-color: transparent;
+              color:@white;
+              .caret {
+                border-top-color:@white;
+              }
+            }
+          }
+          &:hover {
+            color:@grayDarker;
+            .caret {
+              border-top-color:@grayDark;
+            }
+          }
+        }
+        &.open {
+          > a.btn-success {
+            border: 1px solid #DDD;
+            border-bottom-color: transparent;
+          }
+        }
+        &.active > a {
+          color:@gray;
+          .caret {
+            border-top-color:@grayDark;
+          }
+        }
+        &.right-dropdown > ul {
+          float:right;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .property {
+    .header-info {
+      min-width:430px;
+    }
+  }
+}
+
+@media (max-width:320px) {
+  .property {
+    #title-blocks > .nav-tabs {
+      margin-top:3px;
+      margin-left:3px;
+      > li > a {
+        font-size:9px;
+        padding-left:9px;
+        padding-right:9px;
+        padding-top:4px;
+        padding-bottom:4px;
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .property {
+    .header-info {
+      margin-left:0;
+      h1 {
+        font-size:24px;
+        
+        min-height:44px + 6px;
+/*        margin-bottom:22px + 12px; // Increase this to compensate for font-size change.*/
+      }
+    }
+    #title-blocks > .nav-tabs {
+      > li > a {
+        font-size:10px;
+        padding-left:10px;
+        padding-right:9px;
+        padding-top:5px;
+        padding-bottom:5px;
+      }
+    }
+    #primary-tabs {
+      > li {
+        display:none;
+        &.active {
+          display:block;
+          > a.active {
+            .border-radius(4px);
+          }
+        }
+      }
+    }
+    #secondary-tabs {
+      margin-top:18px;
+    }
+  }
+}
+
+@media (max-width:979px) {
+  .property {
+    .page-header {
+      width:100%;
+    }
+  }
+}

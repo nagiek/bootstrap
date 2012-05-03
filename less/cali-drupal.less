@@ -1,0 +1,63 @@
+/* Fix Toolbar for .navbar-fixed-top */
+body.toolbar {
+  padding-top: 90px !important;
+}
+
+body.toolbar .navbar-fixed-top {
+ top: 30px;
+}
+
+body.toolbar-drawer {
+  padding-top: 125px !important;
+}
+
+body.toolbar-drawer .navbar-fixed-top {
+ top: 65px;
+}
+
+html.overlay-open .navbar-fixed-top {
+  z-index: 400;
+}
+
+/* Admin toolbar fix */
+body.admin-expanded.admin-vertical.admin-nw .navbar,
+body.admin-expanded.admin-vertical.admin-sw .navbar {
+  margin-left: 260px;
+}
+
+#toolbar {
+  z-index: @zindexFixedNavbar + 1;
+}
+
+
+div#admin-toolbar {
+  z-index: 500;
+}
+
+/* System base fix */
+.container-inline div, .container-inline label {
+  display: block;
+}
+
+/* Default form fields to auto */
+input, textarea, select, .uneditable-input {
+  width:auto;
+}
+
+/* throbber fix */
+html.js input.form-autocomplete {
+  background-position: 100% 7px; /* LTR */
+  background-repeat: no-repeat;
+}
+html.js input.throbbing {
+  background-position: 100% -13px; /* LTR */
+}
+
+.navbar-search .control-group {
+  margin-bottom:0px;
+}
+
+input.error {
+  color: #B94A48;
+  border-color: #B94A48;
+}

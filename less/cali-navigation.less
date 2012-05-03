@@ -1,0 +1,131 @@
+/**
+ * @file
+ * Navigation Styling
+ */
+
+/**
+ * Navbar
+ */
+.navbar {
+  .nav > li > a {
+    // Override default text-shadow.
+    text-shadow: none;
+    margin-bottom:1px;
+  }
+  .brand {
+    padding-top:4px;
+    padding-bottom:4px;
+  }
+  .btn-nav {
+    float:left;
+    display:none;
+  }
+}
+
+/**
+ * Links
+ */
+a > .badge {
+  margin-left:4px; /* LTR */
+}
+
+/**
+ * Lists
+ */
+.inline {
+  > li {
+    display:inline;
+  }
+  li + li {
+    margin-left:10px;
+  }
+}
+
+/**
+ * Navigation bar
+ */
+.navbar {
+  .btn-navbar,
+  .btn-navbar:hover {
+    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+    color: @white;
+    .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+  }
+  
+  .pull-right .dropdown-menu {
+    &:before {
+      right: 9px;
+      left:auto;
+    }
+    &:after {
+      right: 10px;
+      left:auto;
+    }
+  }
+}
+
+/*
+ * The skip navigation link will be completely hidden until a user tabs to the
+ * link. See http://www.webaim.org/techniques/skipnav/
+ */
+#skip-link {
+  a,
+  a:visited {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: -500px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    text-align: center;
+  }
+  a:hover,
+  a:active,
+  a:focus {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 2px 0 3px 0;
+  }
+}
+
+/**
+ * Action links
+ */
+#primary-tabs {
+  margin-top:18px;
+}
+
+/**
+ * Action links
+ */ 
+.action-links {
+  display:inline-block;
+  li {
+    margin:0 5px 0 0; /* LTR */
+    /*height:16px;*/ /* icon height */
+    display:inline;
+    &.icon-action a {
+      padding:0 0 0 20px; /* icon is 16px wide */
+      display:inline-block;
+    }
+    a {
+      line-height:16px; /* icon height */
+    }
+  }
+}
+
+/**
+ * Secondary actions
+ */
+#block-menu-menu-secondary-actions-menu {
+  ul {
+    padding:0;
+  }
+  li {
+    display:inline;
+    padding:0 1em 0 0;
+    margin: 0;
+  }
+}
